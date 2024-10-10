@@ -19,6 +19,10 @@ public class FormaManager {
         if (tamanho <= 0){
             throw new IllegalArgumentException("O tamanho não pode ser zero ou negativo!");
         }
+
+        if (posicao == null || posicao.isEmpty()){
+            throw new IllegalArgumentException("A posição não pode ser vazia!");
+        }
         // Obtém a cor correspondente da CorFactory
         Cor cor = CorFactory.getCor(nomeCor);
 
